@@ -129,13 +129,6 @@ SQLite stores users, notes and activity events. Note tags and action items are s
 
 Record a 5-10 minute walkthrough covering:
 
-- Signup and login
-- Creating and editing notes
-- Autosave behavior
-- Tags, categories, search and filtering
-- AI summary generation
-- Public share link
-- Insights dashboard
 
 ## Sample Outputs
 
