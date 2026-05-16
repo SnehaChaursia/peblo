@@ -4,17 +4,13 @@ services:
     env: docker
     plan: free
     autoDeploy: true
-    disk:
-      name: peblo-notes-data
-      mountPath: /app/data
-      sizeGB: 1
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 4000
       - key: DATABASE_URL
-        value: /app/data/peblo.sqlite
+        value: /tmp/peblo.sqlite
       - key: GROQ_MODEL
         value: llama-3.1-8b-instant
       - key: JWT_SECRET

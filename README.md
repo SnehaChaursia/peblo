@@ -69,11 +69,13 @@ This repo includes `render.yaml` and a `Dockerfile` for a single Render web serv
 1. Push the repo to GitHub.
 2. In Render, choose **New** -> **Blueprint**.
 3. Select the GitHub repo.
-4. Render will create one web service with a persistent SQLite disk at `/app/data`.
+4. Render will create one free web service.
 5. Add `GROQ_API_KEY` in the Render environment variables.
 6. Deploy.
 
 Render sets `JWT_SECRET` automatically from `render.yaml`. The app serves both frontend and backend from the same URL, so no production `VITE_API_URL` is required.
+
+On Render free plan, SQLite data is stored at `/tmp/peblo.sqlite`, so demo data can reset when the service restarts. For persistent data, upgrade the Render service and add a persistent disk, then set `DATABASE_URL=/app/data/peblo.sqlite`.
 
 For manual deployment instead of Blueprint:
 
